@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-scroll";
-import Image from "next/image";
-import Logo from "../public/streamlineLogo.png";
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -78,10 +76,10 @@ function Navbar() {
 							<button
 								onClick={() => setIsOpen(!isOpen)}
 								type="button"
-								className="bg-blue-600 inline-flex items-center justify-center p-2 rounded-md text-white  hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+								className="bg-white inline-flex items-center justify-center p-2 rounded-md text-black  hover:bg-grey-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
 								aria-controls="mobile-menu"
 								aria-expanded="false"
-							>
+								>
 								<span className="sr-only">Open main menu</span>
 								{!isOpen ? (
 									<svg
