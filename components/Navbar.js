@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-scroll";
+import Link from 'next/link'
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -16,59 +16,19 @@ function Navbar() {
 								</h1>
 							</div>
 							<div className="hidden md:block">
-								<div className="ml-10 flex items-baseline space-x-4">
-									<Link
-										activeClass="Home"
-										to="about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer text-blue-600 font-semibold px-3 py-2 text-md hover:font-black"
-									>
-										Home
-									</Link>
-									<Link
-										activeClass="about"
-										to="about"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
-										About
-									</Link>
-									<Link
-										activeClass="work"
-										to="work"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
-										Projects
-									</Link>
-
-									<Link
-										activeClass="Services"
-										to="work"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-									>
-										Services
-									</Link>
-
-									<Link
-										activeClass="contact"
-										to="contact"
-										smooth={true}
-										offset={50}
-										duration={500}
-										className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
-									>
-										Contact
-									</Link>
+								<div className="ml-10 flex items-baseline space-x-8">
+										<Link href='/home'>
+											<p>home</p>
+										</Link>
+										<Link href='/about'>
+											<p>about</p>
+										</Link>
+										<Link href='/resources'>
+											<p>resources</p>
+										</Link>
+										<Link href='/login'>
+											<p className="text-blue-400">Login</p>
+										</Link>
 								</div>
 							</div>
 						</div>
@@ -132,63 +92,21 @@ function Navbar() {
 						<div className="md:hidden" id="mobile-menu">
 							<div
 								ref={ref}
-								className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
+								className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col space-y-8 items-center"
 							>
-								<Link
-									href="/home"
-									activeClass="home"
-									to="home"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+								<Link href='/home'>
 									Home
 								</Link>
-								<Link
-									href="/about"
-									activeClass="about"
-									to="about"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+								<Link href='/home'>
 									About
 								</Link>
-
-								<Link
-									href="/work"
-									activeClass="work"
-									to="work"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+								<Link href='/home'>
 									Projects
 								</Link>
-								<Link
-									href="/services"
-									activeClass="services"
-									to="services"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+								<Link href='/home'>
 									Services
 								</Link>
-
-								<Link
-									href="/contact"
-									activeClass="work"
-									to="work"
-									smooth={true}
-									offset={50}
-									duration={500}
-									className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-								>
+								<Link href='/home'>
 									Contact
 								</Link>
 							</div>
